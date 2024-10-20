@@ -8,6 +8,7 @@ public class FactoryMethodEx1 {
     }
 }
 
+// Common interface for all types of transport
 interface Transport{
     void deliver();
 }
@@ -26,11 +27,16 @@ class Ship implements Transport{
     }
 }
 
+// Creator class that declares the factory method
 abstract class Logistics{
+    // Factory method that subclasses will implement
     public abstract Transport createTransport();
 
+    // Business logic that uses the factory method
     public void planDelivery(){
+        // Call the factory method to get a transport object
         Transport transport = createTransport();
+        // Now use the created transport object
         transport.deliver();
     }
 }
