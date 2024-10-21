@@ -1,5 +1,31 @@
 public class AbstractFactoryEx1 {
-    
+    private Button button;
+    private CheckBox checkBox;
+
+    public AbstractFactoryEx1(GUIFactory factory){
+        // The client is unaware of the concrete factory it’s dealing with
+        button = factory.createButton();
+        checkBox = factory.createCheckBox();
+    }
+
+    public void paint(){
+        button.paint();
+        checkBox.paint();
+    }
+
+    public static void main(String[] args) {
+        // The GUIFactory can be chosen based on the runtime environment
+
+        // For Windows
+        GUIFactory windowsFactory = new WindowsFactory();
+        AbstractFactoryEx1 f1 = new AbstractFactoryEx1(windowsFactory);
+        f1.paint();
+
+        // For MacOS
+        GUIFactory macOSFactory = new MacOSFactory();
+        AbstractFactoryEx1 f2 = new AbstractFactoryEx1(macOSFactory);
+        f2.paint();
+    }
 }
 
 interface Button{
@@ -41,6 +67,29 @@ class MacOSCheckBox implements CheckBox{
 // Abstract Factory Interface
 interface GUIFactory{
     Button createButton();
-    CheckBox creatCheckBox();
+    CheckBox createCheckBox();
 }
 
+class WindowsFactory implements GUIFactory{
+    @Override
+    public Button createButton(){
+        return new WindowsButton();
+    }
+
+    @Override
+    public CheckBox createCheckBox(){
+        return new WindowsCheckBox();
+    }
+}
+
+class MacOSFactory implements GUIFactory{
+    @Override
+    public Button createButton(){
+        return new MacOSButton();
+    }
+
+    @Override
+    public CheckBox createCheckBox(){
+        return new MacOSCheckBox();
+    }
+}
