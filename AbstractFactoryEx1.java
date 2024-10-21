@@ -38,7 +38,7 @@ class MacOSCheckBox implements CheckBox{
     }
 }
 
-// Abstract Factory Interface
+//  Abstract Factory Interface
 interface GUIFactory{
     Button createButton();
     CheckBox creatCheckBox();
