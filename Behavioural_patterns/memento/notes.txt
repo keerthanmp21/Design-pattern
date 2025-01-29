@@ -1,0 +1,42 @@
+## **Memento Design Pattern in Java**
+
+The **Memento Design Pattern** is a **behavioral** design pattern that allows an 
+object's state to be saved and restored without exposing its internal structure. 
+It is commonly used for implementing undo/redo functionality.
+
+---
+
+## **Key Participants**
+1. **Originator**: The object whose state needs to be saved and restored.
+2. **Memento**: A snapshot of the originator’s state that is stored for future 
+    retrieval.
+3. **Caretaker**: Manages memento objects and maintains the history of states.
+
+
+
+## **Explanation**
+1. **Memento (`Memento`)**:
+   - Stores the state of `Editor` as a snapshot.
+2. **Originator (`Editor`)**:
+   - Creates mementos (`save()`) and restores state (`restore()`).
+3. **Caretaker (`History`)**:
+   - Saves and manages mementos using a **stack** to enable undo functionality.
+4. **Client (`Main`)**:
+   - Simulates a user editing text and using undo operations.
+
+---
+
+## **Benefits**
+- **Encapsulation**: The internal state of `Editor` is not exposed to `History`.
+- **Undo/Redo Functionality**: By maintaining a stack of states, the `Caretaker` 
+allows users to revert changes.
+- **Separation of Concerns**: The `Editor` focuses on its functionality, while the 
+`History` manages state history.
+
+---
+
+## **Use Cases**
+- **Text editors** (undo/redo functionality).
+- **Graphics editors** (reverting changes).
+- **Game state saving** (checkpoint system).
+- **Configuration management** (reverting to previous settings).
