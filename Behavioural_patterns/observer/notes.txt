@@ -1,0 +1,56 @@
+# **Observer Design Pattern in Java**  
+
+The **Observer Design Pattern** is a **behavioral design pattern** that allows an 
+    object (the **subject**) to maintain a list of dependent objects (**observers**) 
+    that need to be notified whenever the subject's state changes.  
+
+This pattern is widely used in **event-driven systems**, such as GUI applications, 
+    messaging systems, and real-time event handling.
+
+---
+
+## **Key Participants**
+1. **Subject (Observable)**:  
+   - Maintains a list of observers.  
+   - Provides methods to add, remove, and notify observers.  
+
+2. **Observer**:  
+   - Defines an interface that observers must implement.  
+   - Gets notified of changes in the subject.  
+
+3. **Concrete Subject**:  
+   - Implements the subject interface.  
+   - Maintains and updates its state.  
+
+4. **Concrete Observers**:  
+   - Implements the observer interface.  
+   - Reacts to notifications from the subject.  
+
+
+## **Explanation**
+1. **Subject (`WeatherStation`)**:
+   - Maintains a list of observers.
+   - Notifies all observers when the temperature changes.
+
+2. **Observers (`PhoneDisplay`, `LEDDisplay`)**:
+   - Implement the `Observer` interface.
+   - Get notified whenever the weather station updates the temperature.
+
+3. **Client (`Main`)**:
+   - Registers and removes observers dynamically.
+   - Simulates temperature updates.
+
+---
+
+## **Benefits**
+✅ **Loose Coupling**: Observers are **independent** of the subject, making the system flexible.  
+✅ **Scalability**: New observers can be added without modifying existing code.  
+✅ **Event-Driven**: Automatically notifies all subscribers when the state changes.  
+
+---
+
+## **Use Cases**
+- **GUI Applications** (e.g., button click listeners).  
+- **Messaging Systems** (e.g., pub-sub architecture).  
+- **Stock Market Monitoring** (e.g., update stock prices for multiple investors).  
+- **Distributed Systems** (e.g., microservices event communication).  
