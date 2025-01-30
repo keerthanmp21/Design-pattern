@@ -1,0 +1,19 @@
+The **Template Method Design Pattern** is a **behavioral** design pattern that defines the skeleton of an algorithm in a base class but allows subclasses to alter certain steps without changing the overall structure.
+
+---
+
+## **Key Concepts**
+1. **Abstract Class** – Defines the template method with steps of the algorithm.  
+2. **Concrete Subclasses** – Implement specific steps while following the template structure.  
+
+
+
+## **Advantages**
+✅ Promotes **code reuse** by defining a fixed structure  
+✅ Reduces code duplication  
+✅ Makes algorithms easier to maintain and extend  
+
+## **Use Cases**
+- **Data Processing Pipelines** (e.g., XML, CSV, JSON processing)  
+- **Game AI** (e.g., defining game rules with modifiable behaviors)  
+- **Report Generation** (e.g., PDF, Excel, HTML reports)  
