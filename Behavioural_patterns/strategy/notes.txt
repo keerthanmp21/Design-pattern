@@ -1,0 +1,19 @@
+The **Strategy Design Pattern** is a **behavioral** design pattern that allows you to define a family of algorithms, encapsulate each one, and make them interchangeable. This pattern lets the algorithm vary independently from the clients that use it.
+
+---
+
+## **Key Concepts**
+1. **Strategy Interface** – Defines a common interface for all algorithms.
+2. **Concrete Strategies** – Implement different variations of an algorithm.
+3. **Context** – Maintains a reference to a Strategy object and delegates the task to it.
+
+
+## **Advantages**
+✅ Avoids `if-else` conditions for selecting an algorithm  
+✅ Improves code maintainability and scalability  
+✅ Allows runtime selection of algorithms  
+
+## **Use Cases**
+- **Sorting Algorithms** (e.g., QuickSort, MergeSort, BubbleSort)  
+- **Payment Methods** (e.g., PayPal, Credit Card, Cryptocurrency)  
+- **Compression Algorithms** (e.g., ZIP, RAR, GZIP)  
