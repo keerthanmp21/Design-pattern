@@ -1,0 +1,19 @@
+The **State Design Pattern** is a behavioral design pattern that allows an object to change its behavior when its internal state changes. It is particularly useful when an object has multiple states, each with its own behavior, and you want to avoid using long conditional statements (`if-else` or `switch-case`) to handle state transitions.
+
+---
+
+## **Key Concepts**
+1. **Context**: The main object whose behavior changes based on its state.
+2. **State Interface**: Defines the methods that concrete states must implement.
+3. **Concrete States**: Implement specific behaviors for each state.
+
+
+## **Advantages**
+✅ Eliminates complex conditional statements  
+✅ Improves code maintainability  
+✅ Encourages encapsulation of state-specific logic  
+
+## **Use Cases**
+- **Game Development** (e.g., player states like "Jumping", "Running", "Idle")  
+- **Workflow Engines** (e.g., document states like "Draft", "Review", "Published")  
+- **UI Components** (e.g., button states like "Enabled", "Disabled", "Loading")  
